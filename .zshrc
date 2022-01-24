@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions autojump nvm)
+plugins=(git zsh-autosuggestions nvm terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,9 +114,6 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-export ANDROID_HOME=$ANDROID_SDK_ROOT
-
 alias dc="docker compose"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -124,4 +121,9 @@ alias dc="docker compose"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export NODE_EXTRA_CA_CERTS=~/wh_chain_sc1wnpresc04.crt
+
+export EDITOR=nvim
+export VISUAL=$EDITOR
+
+
