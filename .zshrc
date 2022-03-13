@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions nvm terraform)
+plugins=(git zsh-autosuggestions nvm terraform kubectl npm yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,4 +126,7 @@ export NODE_EXTRA_CA_CERTS=~/wh_chain_sc1wnpresc04.crt
 export EDITOR=nvim
 export VISUAL=$EDITOR
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+bindkey "${terminfo[kcuf1]}" forward-word
 
+[ -d ~/bin ] && export PATH=$PATH:~/bin

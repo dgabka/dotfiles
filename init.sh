@@ -18,6 +18,15 @@ brew install warrensbox/tap/tfswitch
 
 brew install tmux nvim nvm tfswitch 
 
+mkdir ~/.config
+cd ~/.config
+git clone git@github.com:dgabka/nvim-config.git
+mv nvim-config nvim
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+cd -
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 tmux source ~/.tmux.conf
