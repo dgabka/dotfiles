@@ -9,6 +9,7 @@ ln -s $PWD/.p10k.zsh ~/.p10k.zsh
 ln -s $PWD/.hyper.js ~/.hyper.js
 ln -s $PWD/.tmux.conf ~/.tmux.conf
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
@@ -16,18 +17,14 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 brew install warrensbox/tap/tfswitch
 
-brew install tmux nvim nvm tfswitch 
+brew install tmux nvim nvm tfswitch lazygit 
 
 mkdir ~/.config
 cd ~/.config
 git clone git@github.com:dgabka/nvim-config.git
 mv nvim-config nvim
 
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 cd -
-
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 tmux source ~/.tmux.conf
 
