@@ -115,6 +115,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 alias dc="docker compose"
+alias tmux="env TERM=screen-256color tmux"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -125,8 +126,9 @@ export NODE_EXTRA_CA_CERTS=~/wh_chain_sc1wnpresc04.crt
 
 export EDITOR=nvim
 export VISUAL=$EDITOR
+export TERM=xterm-256color-italic
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 bindkey "${terminfo[kcuf1]}" forward-word
 
-[ -d ~/bin ] && export PATH=$PATH:~/bin
+[ -d ~/bin ] && export PATH=$PATH:~/bin:~/.cargo/bin
