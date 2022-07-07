@@ -132,3 +132,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 bindkey "${terminfo[kcuf1]}" forward-word
 
 [ -d ~/bin ] && export PATH=$PATH:~/bin:~/.cargo/bin
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
